@@ -1,60 +1,20 @@
-# Dependencies
+# Only ignore truly unnecessary files
 node_modules/
-npm-debug.log
-yarn-error.log
-
-# Testing
-coverage/
-.nyc_output/
-
-# Development
-.env.local
-.env.development.local
-
-# Build artifacts (Vercel rebuilds)
-dist/
-build/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
+.git/
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
 
-# Git
-.git/
-.gitattributes
-
-# CI/CD
-.github/
-.gitlab-ci.yml
-.circleci/
-
-# Documentation (keep README for reference)
-docs/
-
-# Legacy/old code (not needed for production)
+# Legacy code
 legacy/
-supabase/migrations/
-scripts/seeding/
 
-# Testing files
-.test/
-__tests__/
-*.test.ts
-*.test.tsx
-*.spec.ts
-*.spec.tsx
+# Build output (Vercel will rebuild)
+dist/
 
-# Agent/skills (development only)
-.agent/
-.agents/
-skills-lock.json
+# Secrets
+.env.local
+.env.development.local
 
 # Config files
 vite.config.ts
