@@ -13,6 +13,7 @@ import { AddSalePage } from "@/app/AddSalePage";
 import { LandingPage } from "@/app/LandingPage";
 import { supabase } from "@/lib/supabase";
 import { CurrencyProvider } from "@/context/CurrencyContext";
+import { FilterProvider } from "@/context/FilterContext";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { BackgroundMesh } from "@/components/ui/BackgroundMesh";
 import type { Session } from "@supabase/supabase-js";
@@ -61,8 +62,6 @@ function AppLayout() {
     </>
   );
 }
-
-import { FilterProvider } from "@/context/FilterContext";
 
 function App() {
   const [session, setSession] = useState<Session | null>(null);
