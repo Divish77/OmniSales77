@@ -9,9 +9,9 @@ coverage/
 
 # Development
 .env.local
-.env.development
+.env.development.local
 
-# Build artifacts
+# Build artifacts (Vercel rebuilds)
 dist/
 build/
 
@@ -28,7 +28,6 @@ Thumbs.db
 
 # Git
 .git/
-.gitignore
 .gitattributes
 
 # CI/CD
@@ -36,17 +35,26 @@ Thumbs.db
 .gitlab-ci.yml
 .circleci/
 
-# Documentation
-*.md
+# Documentation (keep README for reference)
 docs/
-README.md
 
-# Source files (we only need dist/)
-src/
-scripts/
+# Legacy/old code (not needed for production)
 legacy/
-supabase/
-public/
+supabase/migrations/
+scripts/seeding/
+
+# Testing files
+.test/
+__tests__/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Agent/skills (development only)
+.agent/
+.agents/
+skills-lock.json
 
 # Config files
 vite.config.ts
